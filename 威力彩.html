@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = ""
+
+        document.write("威力彩 <br>A區號碼為<br>")
+        for (let i = 0; i < 6; i++) {
+            let xx = (Math.round(Math.random() * 38) + 1)
+
+            if (a.indexOf(xx + " ") > 0) {
+                i = i - 1
+                continue
+            } else {
+                a = a + xx + ' '
+            }
+
+
+        }
+        document.write(a + "<br>")
+        document.write("B區號碼為" + (Math.floor(Math.random() * 8) + 1))
+    </script>
+</body>
+
+</html>
